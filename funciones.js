@@ -1,10 +1,7 @@
 function calcularDisponible(ingresos,egresos){
     let valorDisponible=0
     valorDisponible=ingresos-egresos;
-    if(valorDisponible <0){
-        return 0;
-    }
-    return valorDisponible;
+    return valorDisponible <0 ? 0 :valorDisponible;
 
 }
 function calcularCapacidadPago(valorDisponible){
@@ -20,3 +17,17 @@ let interes;
 interes = plazoAnios * monto * (tasa / 100);
 return interes;
 }
+
+function calcularTotalPagar(monto, interes) {
+let total;
+total = monto + interes + 100;
+return total;
+}
+
+function calcularCuotaMensual(total, plazoAnios) {
+let cuota;
+let meses = plazoAnios * 12;
+cuota = total / meses;
+return cuota;
+}
+

@@ -27,6 +27,12 @@ function calcular(){
     let interes = calcularInteresSimple(monto, tasaInteres, plazoAnios);
     document.getElementById("spnInteresPagar").innerText = interes;
 
+    let totalPagar = calcularTotalPagar(monto, interes);
+    document.getElementById("spnTotalPrestamo").innerText = totalPagar;
+
+    let cuotaMensual = calcularCuotaMensual(totalPagar, plazoAnios);
+    document.getElementById("spnCuotaMensual").innerText = cuotaMensual;
+
  
  
 }
