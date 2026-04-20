@@ -1,0 +1,13 @@
+prompt 1:
+  .logo
+    .Crea un logo con la imagen que te pasé y que sea de un fondo verde grisáceo y el símbolo de dólar 
+    sea tipo glass. En cuanto a las letras, dale un poquito más de estética y que el logo sea 
+    minimalista y bien hecho.
+    .Ok, pero quería que lo hicieras más profesional. En cuanto alsímbolo del logo, el 
+     dólar, el círculo, todo fuera más estético y con formas bien hechas, pero que 
+     siga manteniendo un estilo glass, pero que se vea profesional y no hecho por un niño. En cuanto a 
+     las letras, dame un poquito más de diseño más minimalista, como para un banco, una institución bancaria.
+  simulador.css
+    .Modifica ese archivo para darle diseño a la página. Usa la primera imagen como fondo y la segunda es el 
+    logo. Dale una estética tipo de institución bancaria, que predomine la paleta de colores de la primeera
+    imagen imagen.
