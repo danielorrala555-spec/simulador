@@ -18,6 +18,15 @@ function calcular(){
     let capacidadDePago=calcularCapacidadPago(saldoDisponible);
     let mostrarCapacidadPago=document.getElementById("spnCapacidadPago");
     mostrarCapacidadPago.innerText=capacidadDePago;
+
+    let monto = parseInt(document.getElementById("txtMonto").value);
+    let plazoAnios = parseInt(document.getElementById("txtPlazo").value);
+    let tasaInteres = parseInt(document.getElementById("txtTasaInteres").value);
+
+
+    let interes = calcularInteresSimple(monto, tasaInteres, plazoAnios);
+    document.getElementById("spnInteresPagar").innerText = interes;
+
  
  
 }
