@@ -1,79 +1,202 @@
-/* Definición de colores institucionales */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
+
 :root {
-    --color-fondo-oscuro: #3e4a3d; /* Verde oscuro de la imagen 1 */
-    --color-dorado: #d4af37;       /* Color base para acentos */
-    --color-blanco: #2f5f45;
+    --verde-oscuro: #3e4a3d;
+    --verde-medio: #899b6f;
+    --dorado: #d4af37;
+    --dorado-claro: #f0d060;
+    --blanco: #f9f6ef;
+    --gris-texto: #444;
+    --error: #c0392b;
+    --ok: #27ae60;
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('IMG_0753.JPG'); /* Asegúrate que este sea el nombre de la 1era imagen */
+    font-family: 'DM Sans', sans-serif;
+    background-image: url('IMG_0753.JPG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 0;
-    padding: 20px;
-    color: #333;
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: var(--gris-texto);
 }
 
 .container {
-    width: 400px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: rgba(137, 155, 111, 0.95); /* Fondo ligeramente transparente */
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    border-top: 5px solid var(--color-fondo-oscuro);
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 35px 30px;
+    background-color: rgba(143, 166, 112, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    border-top: 6px solid var(--verde-oscuro);
 }
 
-/* Espacio para el logo */
 .logo {
-    width: 150px;
+    width: 120px;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 12px auto;
 }
 
 h1 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    color: var(--color-fondo-oscuro);
-    font-variant: small-caps;
+    color: var(--verde-oscuro);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.autor {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 h2 {
-    color: var(--color-fondo-oscuro);
-    border-bottom: 2px solid var(--color-dorado);
+    font-family: 'Playfair Display', serif;
+    color: var(--verde-oscuro);
+    font-size: 1.05rem;
+    border-bottom: 2px solid var(--dorado);
     padding-bottom: 5px;
+    margin: 22px 0 14px 0;
 }
 
 label {
     display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 0.88rem;
     color: #555;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 12px;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    box-sizing: border-box;
+    border-radius: 7px;
+    border: 1.5px solid #c8cfc0;
+    background: #fff;
+    font-size: 0.95rem;
+    font-family: 'DM Sans', sans-serif;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--verde-oscuro);
+    box-shadow: 0 0 0 3px rgba(62,74,61,0.12);
+}
+
+input.input-error {
+    border-color: var(--error) !important;
+    background: #fff5f5;
+}
+
+input.input-ok {
+    border-color: var(--ok) !important;
+    background: #f5fff8;
+}
+
+/* Mensajes de error debajo de cada campo */
+.error-msg {
+    display: none;
+    color: var(--error);
+    font-size: 0.78rem;
+    margin-top: 4px;
+    font-weight: 500;
+    padding-left: 2px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.resultado-row {
+    background: rgba(62,74,61,0.07);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-top: 14px;
+}
+
+.resultado-row p {
+    font-size: 0.9rem;
+    padding: 3px 0;
+    color: #444;
+}
+
+.valor {
+    font-weight: 700;
+    color: var(--verde-oscuro);
+}
+
+.estado-label {
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.estado-aprobado {
+    color: var(--ok);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.estado-rechazado {
+    color: var(--error);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 button {
-    width: 100%;
-    margin-top: 15px;
+    flex: 1;
     padding: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: var(--color-fondo-oscuro);
-    color: white;
-    font-weight: bold;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    font-family: 'DM Sans', sans-serif;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.25s, transform 0.1s;
 }
 
-button:hover {
-    background-color: #2c362c;
+button:active { transform: scale(0.97); }
+
+#btnCalcularCredito {
+    background-color: var(--verde-oscuro);
+    color: white;
+}
+
+#btnCalcularCredito:hover { background-color: #2c362c; }
+
+#btnReiniciar {
+    background-color: transparent;
+    color: var(--verde-oscuro);
+    border: 2px solid var(--verde-oscuro);
+}
+
+#btnReiniciar:hover {
+    background-color: var(--verde-oscuro);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container { padding: 25px 18px; }
+    h1 { font-size: 1.6rem; }
+    .buttons { flex-direction: column; }
 }
