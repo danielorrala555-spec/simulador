@@ -13,5 +13,10 @@ function calcularInteresSimple(monto, plazo, tasa, ){
   let interesBr = plazo * monto * tasa;
   let interes = (interesBr / 100);
   return interes;
+}
+
+function calcularTotalPagar(monto, interes){
+    let totalPagar = monto + interes + 100 /* $100 interes a SOLCA*/ ;
+    return totalPagar
 
 }

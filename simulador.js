@@ -32,14 +32,16 @@ function calcular(){
     let disponible = calcularDisponible(ingresos, egresos);
     let capacidadPago = calcularCapacidadDePgo(disponible);
     let interes = calcularInteresSimple(txtmonto, txtPlazo, txtTazaInteres )
+    let total = calcularTotalPagar(txtmonto, interes)
 
     if(disponible < 0 && capacidadPago<0){
         disponible = 0;
         capacidadPago = 0;
     }
-    mostarEnEspam("spnDisponible", disponible)
-    mostarEnEspam("spnCapacidadPago", capacidadPago)
-    mostarEnEspam("spnInteresPagar", interes)
+    mostarEnEspam("spnDisponible", disponible);
+    mostarEnEspam("spnCapacidadPago", capacidadPago);
+    mostarEnEspam("spnInteresPagar", interes);
+    mostarEnEspam("spnTotalPrestamo", total);
     
 
 }
