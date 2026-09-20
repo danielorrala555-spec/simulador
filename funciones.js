@@ -4,3 +4,8 @@ function calcularDisponible(ingresos, egresos){
     return resultado
 
 }
+function calcularCapacidadDePgo(disponible){
+    let capacidadPago=disponible/2;
+    return capacidadPago
+    
+}

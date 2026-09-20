@@ -22,10 +22,13 @@ function calcular(){
     let ingresos = recuperarFloat("txtIngresos")
     let egresos = recuperarFloat("txtEgresos")
     let disponible = calcularDisponible(ingresos, egresos);
-    if(disponible < 0){
-        disponible = 0
+    let capacidadPago = calcularCapacidadDePgo(disponible);
+    if(disponible < 0 && capacidadPago<0){
+        disponible = 0;
+        capacidadPago = 0;
     }
-    mostarEnEspam("spnCapacidadPago", disponible)
+    mostarEnEspam("spnDisponible", disponible)
+    mostarEnEspam("spnCapacidadPago", capacidadPago)
     
 
 }
