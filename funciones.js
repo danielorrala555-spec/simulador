@@ -2,10 +2,16 @@
 function calcularDisponible(ingresos, egresos){
     let resultado = ingresos - egresos;
     return resultado
-
 }
+
 function calcularCapacidadDePgo(disponible){
     let capacidadPago=disponible/2;
-    return capacidadPago
-    
+    return capacidadPago   
+}
+
+function calcularInteresSimple(monto, plazo, tasa, ){
+  let interesBr = plazo * monto * tasa;
+  let interes = (interesBr / 100);
+  return interes;
+
 }
