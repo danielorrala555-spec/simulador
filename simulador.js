@@ -34,16 +34,24 @@ function calcular(){
     let interes = calcularInteresSimple(txtmonto, txtPlazo, txtTazaInteres )
     let total = calcularTotalPagar(txtmonto, interes)
     let cuotaMensual =calcularCuotaMensual(total, txtPlazo)
+    let creditoAprovado = aprobarCreditp(capacidadPago, cuotaMensual)
+    let mensajeCredito;
 
     if(disponible < 0 && capacidadPago<0){
         disponible = 0;
         capacidadPago = 0;
     }
-    mostarEnEspam("spnDisponible", disponible);
-    mostarEnEspam("spnCapacidadPago", capacidadPago);
-    mostarEnEspam("spnInteresPagar", interes);
-    mostarEnEspam("spnTotalPrestamo", total);
-    mostarEnEspam("spnCuotaMensual", cuotaMensual);
+    if(creditoAprovado === true){
+        mensajeCredito = "CREDITO APROBADO"
+    }else{
+        mensajeCredito = "CREDITO RECHAZADO"
+    }
+    mostarEnEspam("spnDisponible", disponible.toFixed(2));
+    mostarEnEspam("spnCapacidadPago", capacidadPago.toFixed(2));
+    mostarEnEspam("spnInteresPagar", interes.toFixed(2));
+    mostarEnEspam("spnTotalPrestamo", total.toFixed(2));
+    mostarEnEspam("spnCuotaMensual", cuotaMensual.toFixed(2));
+    mostarEnEspam("spnEstadoCredito", mensajeCredito);
     
 
 }

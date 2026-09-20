@@ -5,7 +5,7 @@ function calcularDisponible(ingresos, egresos){
 }
 
 function calcularCapacidadDePgo(disponible){
-    let capacidadPago = (disponible/2).toFixed(2);
+    let capacidadPago = disponible/2;
     return capacidadPago   
 }
 
@@ -21,7 +21,16 @@ function calcularTotalPagar(monto, interes){
 }
 
 function calcularCuotaMensual(prTotal, años){
-    let meces = (años*12);
-    let total = (prTotal/ meces).toFixed(2);
+    let meces = años*12;
+    let total = prTotal/ meces;
     return total
+}
+
+function aprobarCreditp(capacidadPago, cuotas){
+if(capacidadPago > cuotas){
+    return true;
+}else{
+    return false;
+} 
+    
 }
