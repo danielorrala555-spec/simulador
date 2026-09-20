@@ -5,7 +5,7 @@ function calcularDisponible(ingresos, egresos){
 }
 
 function calcularCapacidadDePgo(disponible){
-    let capacidadPago=disponible/2;
+    let capacidadPago = (disponible/2).toFixed(2);
     return capacidadPago   
 }
 
@@ -18,5 +18,10 @@ function calcularInteresSimple(monto, plazo, tasa, ){
 function calcularTotalPagar(monto, interes){
     let totalPagar = monto + interes + 100 /* $100 interes a SOLCA*/ ;
     return totalPagar
+}
 
+function calcularCuotaMensual(prTotal, años){
+    let meces = (años*12);
+    let total = (prTotal/ meces).toFixed(2);
+    return total
 }
