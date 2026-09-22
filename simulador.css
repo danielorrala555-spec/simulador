@@ -297,3 +297,12 @@ img{
    transition:.30s;
 
 }
+.mensaje-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    color: #ff4d6d;
+    font-size: 13px;
+}

@@ -1,0 +1,38 @@
+-promtp1.1
+  quero que agas validaciones para este proyecto que aparescan debajo de los imputs, las validaciones 
+  sean las siguientes:
+-solo se admiten numeros
+-maximo 5 caracteres 
+-los recuadros no pueden estar vacios
+-los ingreson no tienen que ser menor a 200 y ni mayor a 7000 dolares
+-el nomto minimo del prestamol deve ser de 500 
+-le monto maximo del prestamo deve ser de 20000
+-los egresos no deven ser mayoresque los ingresos
+utilisa los siguientes ides para hacer las validaciones 
+<label for="txtIngresos">Ingresos:</label>
+<input type="text" id="txtIngresos" onblur="validarIngresos()">
+<span id="errorIngresos" class="mensaje-error"></span>
+
+<label for="txtEgresos">Egresos:</label>
+<input type="text" id="txtEgresos" onblur="validarEgresos()">
+<span id="errorEgresos" class="mensaje-error"></span>
+
+<p>Disponible: <span id="spnDisponible"></span></p>
+<p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
+
+
+<h2>Solicitud de crédito</h2>
+
+<label for="txtMonto">Monto:</label>
+<input type="text" id="txtMonto" onblur="validarMonto()">
+<span id="errorMonto" class="mensaje-error"></span>
+
+<label for="txtPlazo">Plazo en años:</label>
+<input type="text" id="txtPlazo" onblur="validarPlazo()">
+<span id="errorPlazo" class="mensaje-error"></span>
+
+<label for="txtTasaInteres">Tasa de interés:</label>
+<input type="text" id="txtTasaInteres" onblur="validarTasaInteres()">
+<span id="errorTasaInteres" class="mensaje-error"></span>    
+utiliza la misma logica que utilizamos en el proyecto de ventas, pero no modifiques los ides y que las 
+validacione aparescan debajo de los imputs 

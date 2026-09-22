@@ -16,24 +16,32 @@
     <p class="autor">Creado por: Daniel Orrala</p>
 
         <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos">
 
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos">
+<label for="txtIngresos">Ingresos:</label>
+<input type="text" id="txtIngresos" onblur="validarIngresos()">
+<span id="errorIngresos" class="mensaje-error"></span>
 
-        <p>Disponible: <span id="spnDisponible"></span></p>
-        <p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
+<label for="txtEgresos">Egresos:</label>
+<input type="text" id="txtEgresos" onblur="validarEgresos()">
+<span id="errorEgresos" class="mensaje-error"></span>
 
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto">
+<p>Disponible: <span id="spnDisponible"></span></p>
+<p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
 
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo">
 
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres">
+<h2>Solicitud de crédito</h2>
+
+<label for="txtMonto">Monto:</label>
+<input type="text" id="txtMonto" onblur="validarMonto()">
+<span id="errorMonto" class="mensaje-error"></span>
+
+<label for="txtPlazo">Plazo en años:</label>
+<input type="text" id="txtPlazo" onblur="validarPlazo()">
+<span id="errorPlazo" class="mensaje-error"></span>
+
+<label for="txtTasaInteres">Tasa de interés:</label>
+<input type="text" id="txtTasaInteres" onblur="validarTasaInteres()">
+<span id="errorTasaInteres" class="mensaje-error"></span>
 
         <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
         <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>
