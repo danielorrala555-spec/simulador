@@ -8,9 +8,13 @@ body{
 
     font-family:Arial, Helvetica, sans-serif;
 
-    background-image:url("IMG_1494.JPG");
+    background:linear-gradient(
+            rgba(116, 163, 103, 0.899),
+            rgba(157, 175, 123, 0.858)
+        ),
+        url("IMG_1494.JPG");
     background-repeat:repeat;
-    background-size:5px;
+    background-size:250px;
 
     min-height:100vh;
 
