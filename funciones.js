@@ -5,7 +5,7 @@ function calcularDisponible(ingresos, egresos){
 }
 
 function calcularCapacidadDePgo(disponible){
-    let capacidadPago = disponible/2;
+    let capacidadPago = disponible*0.3;
     return capacidadPago   
 }
 
